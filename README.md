@@ -1,7 +1,8 @@
 # RDSalesForce
 
 RDSalesForce is a ruby gem for save a Person as a Contact in Salesforce.
-It uses the restforce gem to work with the [Salesforce REST api](http://www.salesforce.com/us/developer/docs/api_rest/index.htm).
+
+It uses the [restforce](https://github.com/ejholmes/restforce) gem to work with the [Salesforce REST api](http://www.salesforce.com/us/developer/docs/api_rest/index.htm).
 
 ## Installation
 
@@ -29,15 +30,15 @@ Save the object as your Salesforce contact
 
 This is an example of RDSalesForce::Person parameters 
 
-parameters = { 
-  :name => "Name",
-  :last_name => "LastName",
-  :email => "myemail@mycompany.com",
-  :company => "MyCompany",
-  :job_title => "MyJobTitle",
-  :phone => '+55000111222333',
-  :website => "www.mycompany.com"
-} 
+  parameters = { 
+     :name => "Name",
+     :last_name => "LastName",
+     :email => "myemail@mycompany.com",
+     :company => "MyCompany",
+     :job_title => "MyJobTitle",
+     :phone => '+55000111222333',
+     :website => "www.mycompany.com"
+  } 
 
 
 ## Contributing

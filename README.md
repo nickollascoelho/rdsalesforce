@@ -20,36 +20,36 @@ And then execute:
 ## Usage
 
 Create a RDSalesForce::Client object
-
-  params = {
-                'host' => 'url.salesforce.com',  
-                'username' => 'myUsername', 
-                'password' => 'myPassword' 
-                'client_id' => 'myClientId000111',
-                'client_secret' => 'myClientSecretXXXX000111',
-                'security_token' => 'mySecurityTokenXXX9999111DDD'
-            }
+```ruby
+  params = { 
+        :host => 'url.salesforce.com', 
+        :username => 'myUsername', 
+        :password => 'myPassword', 
+        :client_id => 'myClientId000111', 
+        :client_secret => 'myClientSecretXXXX000111', 
+        :security_token => 'mySecurityTokenXXX9999111DDD' 
+    }
             
   @client = RDSalesForce::Client.new(params)
-
+```
 Create a RDSalesForce::Person object
-
+```ruby
   person_parameters = { 
      :name => "Name",
      :last_name => "LastName",
      :email => "myemail@mycompany.com",
      :company => "MyCompany",
      :job_title => "MyJobTitle",
-     :phone => '+55000111222333',
+     :phone => "+55000111222333",
      :website => "www.mycompany.com"
   } 
   
   @person = @client.create_person(person_parameters)
-
+```
 Save the object as your Salesforce lead
-
+```ruby
   @person.save_as_salesforce_lead
-
+```
 
 ## Contributing
 

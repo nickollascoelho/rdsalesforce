@@ -7,9 +7,6 @@ describe RDSalesForce::Client  do
 
   before { @client = RDSalesForce::Client.new(host, username, password) }
   describe "attributes" do
-    it "must have the host attribute" do
-      expect(@client).to respond_to :host
-    end
     it "must have the username attribute" do
       expect(@client).to respond_to :username
     end
@@ -34,9 +31,6 @@ describe RDSalesForce::Client  do
   end 
   describe "#salesforce_api" do
     before { @salesforce = @client.salesforce_api }
-    it "must have the same url than salesforce client" do
-      expect(@salesforce.options[:host]).to eq @client.host
-    end
     it "must have the same username than salesforce client" do
       expect(@salesforce.options[:username]).to eq @client.username
     end

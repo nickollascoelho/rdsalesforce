@@ -8,9 +8,9 @@ module RDSalesForce
     def initialize(host, username, password)
       self.username = 'nickollascoelho@gmail.com'
       self.password = 'salesforce123'
-      self.security_token => 'aL2CXA3jAu7H6jPoZIfFG1rNr',
-      self.client_id      => '3MVG9fMtCkV6eLhfcGInOg5ML9H0SOqpNbd53dLHJsX62lWDfdPhZJ.L5KqDwLFABYRwif2pG7ppdNxZEsgVd',
-      self.client_secret  => '849254060868716892'
+      self.security_token = 'aL2CXA3jAu7H6jPoZIfFG1rNr'
+      self.client_id      = '3MVG9fMtCkV6eLhfcGInOg5ML9H0SOqpNbd53dLHJsX62lWDfdPhZJ.L5KqDwLFABYRwif2pG7ppdNxZEsgVd'
+      self.client_secret  = '849254060868716892'
     end
 
     def create_person(parameters=nil)

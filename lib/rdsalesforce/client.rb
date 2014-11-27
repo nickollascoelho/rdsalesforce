@@ -19,6 +19,7 @@ module RDSalesForce
       @salesforce = Restforce.new :username => self.username,
         :password => self.password,
         :host => self.host
+      @salesforce.authenticate!
       return @salesforce;
     end
 	end

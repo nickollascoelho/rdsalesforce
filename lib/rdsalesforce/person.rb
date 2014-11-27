@@ -13,9 +13,9 @@ module RDSalesForce
         end
     end
     
-    def save_as_salesforce_contact
+    def save_as_salesforce_lead
       salesforce = self.client.salesforce_api
-      @contact = salesforce.create('Contact', attributes)
+      @contact = salesforce.create('Lead', Name: self.name, Email: self.email, Title: self.job_title, Phone: self.phone, Website: self.website)
       return @contact
     end
   end	

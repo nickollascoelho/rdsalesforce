@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/nickollascoelho/rdsalesforce/badge.png?branch=master)](https://coveralls.io/r/nickollascoelho/rdsalesforce?branch=master)
+[![Build Status](https://travis-ci.org/nickollascoelho/rdsalesforce.png?branch=master)](https://travis-ci.org/nickollascoelho/rdsalesforce)
+
 # RDSalesForce
 
 RDSalesForce is a ruby gem for save a Person as a Contact in Salesforce.

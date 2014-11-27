@@ -1,7 +1,9 @@
 require_relative '../../spec_helper'
 
 describe RDSalesForce::Person do
-  before(:each) {  @client = RDSalesForce::Client.new("host_url", "username", "pass")  }
+  let(:person) { {"host" => "host_url", "username" => "username", "password" => "password", "security_token" => "security_token", "client_id" => "client_id", "client_secret" => "client_secret"} }
+
+  before(:each) {  @client = RDSalesForce::Client.new(person)  }
   
   describe "initialize" do
     before { @person = RDSalesForce::Person.new(@client) }

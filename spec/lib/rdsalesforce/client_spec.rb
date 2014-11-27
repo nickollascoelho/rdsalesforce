@@ -1,11 +1,9 @@
 require_relative '../../spec_helper'
 
 describe RDSalesForce::Client  do
-  let(:host) { "host_url" }
-  let(:username) { "username" }
-  let(:password) { "password" }
+  let(:person) { {"host" => "host_url", "username" => "username", "password" => "password", "security_token" => "security_token", "client_id" => "client_id", "client_secret" => "client_secret"} }
 
-  before { @client = RDSalesForce::Client.new(host, username, password) }
+  before { @client = RDSalesForce::Client.new(person) }
   describe "attributes" do
     it "must have the username attribute" do
       expect(@client).to respond_to :username
@@ -19,13 +17,7 @@ describe RDSalesForce::Client  do
     it "must raise exception without arguments" do
       expect(lambda{ RDSalesForce::Client.new }).to raise_error ArgumentError
     end
-    it "must raise exception with one argument" do
-      expect(lambda{ RDSalesForce::Client.new(host) }).to raise_error ArgumentError
-    end
-    it "must raise exception with two arguments" do
-      expect(lambda{ RDSalesForce::Client.new(host, username) }).to raise_error ArgumentError
-    end
-    it "must instantiate with three arguments" do
+    it "must instantiate with one argument" do
       expect(@client).to be_a RDSalesForce::Client
     end
   end 

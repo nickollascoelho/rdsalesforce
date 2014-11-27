@@ -8,7 +8,7 @@ module RDSalesForce
         self.client = client
         parameters.each do |key, val| 
           if self.respond_to? key
-            send("#{k}=", val)
+            send("#{key}=", val)
           end 
         end
     end

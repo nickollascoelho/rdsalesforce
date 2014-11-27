@@ -6,6 +6,7 @@ module RDSalesForce
     attr_accessor :username, :password, :security_token, :client_id, :client_secret
 
     def initialize(host, username, password)
+      self.host = 'https://na16.salesforce.com'
       self.username = 'nickollascoelho@gmail.com'
       self.password = 'salesforce123'
       self.security_token = 'aL2CXA3jAu7H6jPoZIfFG1rNr'
@@ -22,7 +23,8 @@ module RDSalesForce
         :password => self.password,
         :security_token => self.security_token, 
         :client_id => self.client_id, 
-        :client_secret => self.client_secret
+        :client_secret => self.client_secret,
+        :host => self.host
       @salesforce.authenticate!
       return @salesforce;
     end

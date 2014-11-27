@@ -2,11 +2,14 @@ module RDSalesForce
   
   class Client
     require 'rdsalesforce/person'
+    require 'openssl' 
     
-    attr_accessor :username, :password, :security_token, :client_id, :client_secret
+    OpenSSL::SSL.const_set(:VERIFY_PEER, OpenSSL::SSL::VERIFY_NONE)
+
+    attr_accessor :username, :password, :security_token, :client_id, :client_secret, :host
 
     def initialize(host, username, password)
-      self.host = 'https://na16.salesforce.com'
+      self.host = 'na16.salesforce.com'
       self.username = 'nickollascoelho@gmail.com'
       self.password = 'salesforce123'
       self.security_token = 'aL2CXA3jAu7H6jPoZIfFG1rNr'
